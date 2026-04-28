@@ -1,7 +1,6 @@
-package q01_basic.question04;
+package q01_basic.question05;
 
-class Member {
-
+public class Member {
 	/**
 	 * @param id
 	 * @param passward
@@ -136,4 +135,9 @@ class Member {
 		System.out.println("age:" + age);
 		System.out.println("rank:" + rank);
 	}
+
+	public void buyItem() {
+		System.out.println(name + "purchaced the item at 50%off");
+	}
+
 }
