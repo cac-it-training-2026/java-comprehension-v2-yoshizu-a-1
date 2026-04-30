@@ -6,7 +6,7 @@ package q01_basic.question05;
  * 
  */
 
-abstract class AbstMember extends Member {
+abstract class AbstMember {
 
 	/**
 	 * @param name

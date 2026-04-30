@@ -1,6 +1,6 @@
 package q01_basic.question05;
 
-public class NonMember extends Member {
+public class NonMember extends AbstMember {
 	/**
 	 * @param name
 	 */
@@ -29,16 +29,16 @@ public class NonMember extends Member {
 		this.name = name;
 	}
 
-	String name;
-
 	@Override
 	public void buyItem() {
 		// TODO 自動生成されたメソッド・スタブ
-		super.buyItem();
+		System.out.println(name + " purchased the item at a fixed price");
 	}
 
 	@Override
 	public void showMember() {
-		super.showMember();
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println(name + " is a non-member.");
+
 	}
 }
