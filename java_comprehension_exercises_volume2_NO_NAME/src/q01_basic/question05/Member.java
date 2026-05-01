@@ -1,7 +1,6 @@
-package q01_basic.question04;
+package q01_basic.question05;
 
-class Member {
-
+public class Member extends AbstMember {
 	/**
 	 * @param id
 	 * @param passward
@@ -128,12 +127,24 @@ class Member {
 
 	}
 
+	@Override
+	public void buyItem() {
+		// TODO 自動生成されたメソッド・スタブ
+
+		System.out.println(name + " purchased the item at 50% off");
+	}
+
+	@Override
 	public void showMember() {
-		System.out.println("---SHOW DATA---\n***MEMBER DATA***");
+		// TODO 自動生成されたメソッド・スタブ
+
+		System.out.println("***MEMBER DATA***");
 		System.out.println("id:" + id);
 		System.out.println("passward:" + password);
 		System.out.println("name:" + name);
 		System.out.println("age:" + age);
 		System.out.println("rank:" + rank);
+
 	}
+
 }

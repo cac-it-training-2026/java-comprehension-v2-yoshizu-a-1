@@ -5,7 +5,15 @@ package q01_basic.question05;
  * Memberクラス、NonMemberクラスに継承する
  * 
  */
+
 abstract class AbstMember {
+
+	/**
+	 * @param name
+	 */
+	public AbstMember() {
+		this.name = name;
+	}
 
 	/**
 	 * name protected access

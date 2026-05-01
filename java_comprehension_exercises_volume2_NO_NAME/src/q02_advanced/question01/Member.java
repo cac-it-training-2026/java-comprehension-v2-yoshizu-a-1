@@ -1,13 +1,16 @@
-package q01_basic.question04;
+package q02_advanced.question01;
 
-class Member {
+import java.util.ArrayList;
+import java.util.List;
 
+public class Member {
 	/**
 	 * @param id
-	 * @param passward
+	 * @param password
 	 * @param name
 	 * @param age
 	 * @param rank
+	 * @param coupons
 	 */
 	public Member() {
 		this.id = id;
@@ -15,21 +18,37 @@ class Member {
 		this.name = name;
 		this.age = age;
 		this.rank = rank;
+		this.coupons = coupons;
 	}
 
 	/**
 	 * @param id
-	 * @param passward
+	 * @param password
 	 * @param name
 	 * @param age
 	 * @param rank
+	 * @param coupons
 	 */
-	public Member(int id, String passward, String name, int age, int rank) {
+
+	/**
+	 * @param id
+	 * @param password
+	 * @param name
+	 * @param age
+	 * @param rank
+	 * @param coupons
+	 */
+	public Member(int id, String password, String name, int age, int rank) {
 		this.id = id;
-		this.password = passward;
+		this.password = password;
 		this.name = name;
 		this.age = age;
 		this.rank = rank;
+
+		coupons = new ArrayList<>();
+		coupons.add(new Coupon(1, 0.5, "最初の特典"));
+		coupons.add(new Coupon(2, 0.25, "今月の特典"));
+
 	}
 
 	/**
@@ -47,17 +66,17 @@ class Member {
 	}
 
 	/**
-	 * @return passward
+	 * @return password
 	 */
-	public String getPassward() {
+	public String getPassword() {
 		return password;
 	}
 
 	/**
-	 * @param passward セットする passward
+	 * @param password セットする password
 	 */
-	public void setPassward(String passward) {
-		this.password = passward;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	/**
@@ -103,37 +122,33 @@ class Member {
 	}
 
 	/**
-	 * @return password
+	 * @return coupons
 	 */
-	public String getPassword() {
-		return password;
+	public List<Coupon> getCoupons() {
+		return coupons;
 	}
 
 	/**
-	 * @param password セットする password
+	 * @param coupons セットする coupons
 	 */
-	public void setPassword(String password) {
-		this.password = password;
+	public void setCoupons(List<Coupon> coupons) {
+		this.coupons = coupons;
 	}
 
-	//TODO ここから実装する
 	private int id;
 	private String password;
 	private String name;
 	private int age;
 	private int rank;
+	private List<Coupon> coupons;
 
-	public void rankUp() {
-		rank++;
-
+	@Override
+	public String toString() {
+		return "Member [id=" + id + ", password=" + password + ", name=" + name + ", age=" + age + ", rank=" + rank
+				+ ", coupons=" + coupons + "]";
 	}
 
 	public void showMember() {
-		System.out.println("---SHOW DATA---\n***MEMBER DATA***");
-		System.out.println("id:" + id);
-		System.out.println("passward:" + password);
-		System.out.println("name:" + name);
-		System.out.println("age:" + age);
-		System.out.println("rank:" + rank);
+		System.out.println(toString());
 	}
 }
